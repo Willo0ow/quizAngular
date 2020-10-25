@@ -1,0 +1,14 @@
+span{
+    display: inline-block;
+    margin-right: 10px;
+    margin-right: 10px;
+}
+.side-radios{
+    display: inline-block!important;
+    margin-right: 20px;
+}
+button{
+    display: block;
+    width: 200px;
+    margin-top: 20px;
+}

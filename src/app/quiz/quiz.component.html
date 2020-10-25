@@ -1,0 +1,14 @@
+
+<div>
+    <h1>Quiz</h1>
+    <h3>Points: {{points}}</h3>
+    <p>{{questions[step].q}}?</p>
+    <div class="side-radios form-check" *ngFor="let ans of questions[step].answers">
+        <input type="radio" class="form-check-input" [name]="ans.option" [value]="ans.option" [(ngModel)]="answer">
+        <label for="ans.option"></label>{{ans.value}}
+    </div>
+    <p *ngIf="info">{{info}}</p>
+    <button *ngIf="!correct && !done" class="btn btn-primary" (click)="checkAnswer()">Check</button>
+    <button *ngIf="correct && !done" class="btn btn-primary" (click)="nextQuestion()">Next</button>
+    <button *ngIf="done" class="btn btn-primary" (click)="newAtempt()">New atempt</button>
+</div>
